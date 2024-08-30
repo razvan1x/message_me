@@ -10,7 +10,11 @@ consumer.subscriptions.create("ChatroomChannel", {
   },
 
   received(data) {
-    alert(data.foo);
-    console.log("Received message:", data.foo);
+    const messagesContainer = document.getElementById('message-container');
+    
+    // Verifică dacă elementul există înainte de a adăuga conținut
+    if (messagesContainer) {
+      messagesContainer.insertAdjacentHTML('beforeend', data.mod_message);
+    }
   }
 });
