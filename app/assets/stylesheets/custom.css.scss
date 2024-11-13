@@ -14,3 +14,30 @@
     display:none;
   }
 }
+
+.user-dropdown .menu {
+  left: 0 !important;         
+  width: 100% !important;     
+  margin-top: 3em !important; 
+  position: absolute;         
+  z-index: 1000;              
+}
+
+.ui.dropdown.item.link {
+  display: block;
+  width: 100%;
+  position: relative;         
+}
+
+.user-dropdown .dropdown.icon {
+  transform: rotate(90deg); 
+}
+
+.ui.green.circular.label {
+  margin-left: 10px; 
+}
+
+.ui.grey.circular.label {
+  margin-left: 10px;
+}
+

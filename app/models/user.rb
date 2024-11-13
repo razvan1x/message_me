@@ -3,4 +3,8 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false }
   has_many :messages
   has_secure_password
+
+  def active?
+    self.active 
+  end
 end
