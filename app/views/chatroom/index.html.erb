@@ -38,23 +38,25 @@
             Friends
           </a>
           <div class="ui dropdown item link user-dropdown">
-          Users <i class="dropdown icon"></i>
-          <div class="menu">
-            <% @users.each do |user| %>
-              <div class="item">
-                <%= user.username %>
-                
-                <% if user.active? %>
-                  <span class="ui green circular label" title="Active"></span>
-                <% else %>
-                  <span class="ui grey circular label" title="Inactive"></span>
-                <% end %>
+            Users <i class="dropdown icon"></i>
+            <div class="menu">
+              <% @users.each do |user| %>
+                <div class="item">
 
-                <% if user == current_user %>
-                  <span class="ui blue circular label" title="You"></span>
-                <% end %>
-              </div>
-            <% end %>
+                  <% if user.active? %>
+                    <span class="ui green circular label" title="Active" style="font-size: 8px; margin-right: 8px;"></span> 
+                  <% else %>
+                    <span class="ui grey circular label" title="Inactive" style="font-size: 8px; margin-right: 8px;"></span>
+                  <% end %>
+
+                  <% if user == current_user %>
+                    <span style="color: blue; font-weight: bold;"><%= user.username %></span>
+                  <% else %>
+                    <%= user.username %> 
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
